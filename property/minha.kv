@@ -1,0 +1,12 @@
+# file: minha.kv
+<MinhaSpace>:
+    BoxLayout:
+        Label:
+            text: 'Nome'
+        TextInput:
+            id: txtNome
+            text: root.nome
+            on_text: root.callback(args, 'nome')
+        Button:
+            text: 'Salvar'
+            on_release: root.imprime()
